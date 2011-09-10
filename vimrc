@@ -63,9 +63,9 @@ set backspace=indent,eol,start  " Allow backspacing over everything in insert mo
 
 
 " NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
+"let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
-let g:NERDMenuMode=0
+"let g:NERDMenuMode=0
 
 " Command-T configuration
 let g:CommandTMaxHeight=20

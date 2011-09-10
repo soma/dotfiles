@@ -1,3 +1,6 @@
+# Temp vim
+alias vim="mvim"
+
 # Dirs
 alias o="open ."  # OS X, open in Finder
 

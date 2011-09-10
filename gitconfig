@@ -1,8 +1,8 @@
 [user]
-	name = Henrik N
-	email = henrik@nyh.se
+	name = Albert
+	email = albert.ramstedt@gmail.com
 [core]
-	excludesfile = /Users/henrik/.gitignore
+	excludesfile = /Users/albert/.gitignore
 	ignorecase = false
 [color]
 	status = auto
@@ -16,7 +16,7 @@
 	today = shortlog --since=midnight
 	uncommit = reset --soft HEAD^
 [github]
-	user = henrik
+	user = soma
 	token = <.replace github-token>
 [push]
 	default = current
