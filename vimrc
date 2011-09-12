@@ -1,3 +1,4 @@
+set fu
 set nocompatible    " Don't sacrifice anything for Vi compatibility.
 set encoding=utf-8  " In case $LANG doesn't have a sensible value.
 

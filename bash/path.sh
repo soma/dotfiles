@@ -1,7 +1,3 @@
-# MacPorts
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export MANPATH=/opt/local/share/man:/usr/local/man:$MANPATH
-
 # Homebrew
 export PATH=~/.homebrew/bin:~/.homebrew/sbin:$PATH
 export MANPATH=~/.homebrew/man:$MANPATH
