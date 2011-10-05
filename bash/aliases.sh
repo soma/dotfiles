@@ -1,6 +1,9 @@
 # Temp vim
 alias vim="mvim"
 
+# irc
+alias irc='ssh albert@ci.barsoom.se -t screen -dRUS irssi irssi'
+
 # Dirs
 alias o="open ."  # OS X, open in Finder
 
@@ -62,12 +65,7 @@ alias xv="agvtool what-version; agvtool what-marketing-version"  # Show versions
 alias xvbump="agvtool bump -all"  # Bump build number.
 alias xvset="agvtool new-marketing-version"  # Set user-visible version: xvset 2.0
 
-# Servers
-alias grace='sudo apachectl graceful'
 alias rst="touch tmp/restart.txt && echo touched tmp/restart.txt"  # Passenger
 
 alias hosts='sudo vim /etc/hosts'
 
-# Home network
-# On gf's computer, quiet music and disconnect Airfoil from speakers (to free them up for me).
-alias hush="cat ~/.bash/lib/hush.scpt | ssh heli osascript; echo hushed."
