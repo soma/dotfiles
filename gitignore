@@ -1,14 +1,12 @@
+# OS X
 .DS_Store
-
-
-# Ruby on Rails
-config/database.yml
 
 # iPhone development
 # http://www.adminmyserver.com/articles/gitignore-for-iphone-xcode-development
 
 # Build products
-build
+# TODO: Make "build" more specific. Collided with CI build scripts.
+#build
 *.[oa]
 
 # Temp nibs and swap files

@@ -36,6 +36,8 @@ alias sc="[ -f script/console ] && script/console || bundle exec rails console"
 alias sdb="[ -f script/dbconsole ] && script/console --include-password || bundle exec rails dbconsole --include-password"
 alias ss="[ -f script/server ] && script/server || rails server"
 alias mig='rake db:migrate'
+alias rsp="bundle exec specjour"
+alias f="foreman start"
 
 # Git
 alias gl="git log"
@@ -57,6 +59,10 @@ alias gr="git branch -d"
 alias grr="git branch -D"
 alias gcp="git cherry-pick"
 alias gam="git commit --amend"
+
+# Guard
+alias g="bundle exec guard"
+alias gpdf="VIEW_PDF=true bundle exec guard"
 
 # Xcode versioning
 # http://www.blog.montgomerie.net/easy-iphone-application-versioning-with-agvtool

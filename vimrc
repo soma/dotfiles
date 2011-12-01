@@ -17,9 +17,12 @@ colorscheme solarized
 set number                 " Show gutter with line numbers.
 set ruler                  " Show line, column and scroll info in status line.
 set laststatus=2           " Always show status bar.
-set modelines=10           " Use modeline overrides.
+set modelines=1            " Use modeline overrides.
 set showcmd                " Show partially typed command sequences.
 set scrolloff=3            " Minimal number of lines to always show above/below the caret.
+
+" Don't beep.
+set visualbell
 
 " Autocompleting filenames should prompt, not autopick at ambiguity.
 set wildmode=longest,list
@@ -64,7 +67,6 @@ set gdefault    " Global search by default; /g for first-per-row only.
 set nojoinspaces                " 1 space, not 2, when joining sentences.
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
 
-
 " NERDTree configuration
 "let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
@@ -73,6 +75,7 @@ set backspace=indent,eol,start  " Allow backspacing over everything in insert mo
 " Command-T configuration
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
+set wildignore+=*.o,*.obj,.git,tmp,public/uploads
 
 " Syntastic
 let g:syntastic_enable_signs=1
@@ -80,7 +83,8 @@ let g:syntastic_quiet_warnings=1
 
 " Disable align.vim menu
 let g:DrChipTopLvlMenu=""
-
+" Disable align.vim mapping to ,w= so we can use ,w for CamelCaseMotion.
+map <nop> <Plug>AM_w=
 
 " Remember last location in file, but not for commit messages.
 if has("autocmd")
@@ -118,7 +122,7 @@ if has("autocmd")
   au FileType python  set noexpandtab
 
   " These files are also Ruby.
-  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,config.ru}  set ft=ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,Vagrantfile,Guardfile,config.ru}  set ft=ruby
 
   " These files are also Markdown.
   au BufRead,BufNewFile *.{md,mdown,mkd,mkdn} set ft=markdown
@@ -128,6 +132,9 @@ if has("autocmd")
 
   au FileType coffee map <buffer> <D-r> :CoffeeRun<CR>
   au FileType coffee map <buffer> <D-R> :CoffeeCompile<CR>
+
+  " Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
+  au FileType crontab set nobackup nowritebackup
 endif
 
 " Close help windows with just q.
@@ -171,6 +178,7 @@ inoremap <Up> <C-o>gk
 " Save a file as root.
 cabbrev w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
 
+" These rely on the vim-unimpaired plugin.
 " Move single lines.
 nmap <C-Up> [e
 nmap <C-Down> ]e
@@ -187,14 +195,12 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 " 'Edit anyway' if swap file exists.
-au SwapExists * let v:swapchoice = 'e'
+" Commented out since MacVim started crashing all the time on OS X Lion.
+"au SwapExists * let v:swapchoice = 'e'
 
 " Reload file without prompting if it has changed on disk.
 " Will still prompt if there is unsaved text in the buffer.
 set autoread
-
-" Unbreak 'crontab -e' with Vim: http://drawohara.com/post/6344279/crontab-temp-file-must-be-edited-in-place
-au FileType crontab set nobackup nowritebackup
 
 
 " Leader
@@ -205,7 +211,8 @@ let mapleader = ","
 nnoremap <leader><leader> :noh<CR>
 
 map <leader>n :NERDTreeToggle<CR>
-map <leader>N :NERDTreeFind<CR>" Reveal current file
+" Reveal current file
+map <leader>N :NERDTreeFind<CR>
 
 " Print highlighting scope at the current position.
 " http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
@@ -251,15 +258,16 @@ command! -nargs=1 -complete=filetype F set filetype=<args>
 " Even quicker setting often-used filetypes.
 command! FR set filetype=ruby
 
+" Because I often accidentally :W when I mean to :w.
+command! W w
 
 " Strip trailing whitespace (including that in blank lines).
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
 command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
 
-" :Loc to open locales in splits in a tab.
-function! EditLocales()
-  tabe
-  args config/locales/*.yml | vertical all
-endfunction
-command! Loc call EditLocales()
+" Snippets that are too long for .vimrc, too short for plugins.
+
+source ~/.vim/shorts/reveal_in_finder.vim
+source ~/.vim/shorts/focus_toggle.vim
+source ~/.vim/shorts/edit_rails_locales.vim

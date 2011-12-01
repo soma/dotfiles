@@ -1,10 +1,5 @@
-# Homebrew
-export PATH=~/.homebrew/bin:~/.homebrew/sbin:$PATH
-export MANPATH=~/.homebrew/man:$MANPATH
-
 # Custom scripts
 export PATH=~/bin:$PATH
-
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
@@ -16,10 +11,7 @@ if [ -f `bsbrew --prefix`/etc/autojump ]; then
 fi
 
 # To get the GUI-less Vim from MacVim:
-# ln -s ~/.homebrew/bin/mvim ~/.homebrew/bin/vim
-
-# node.js
-export NODE_PATH=~/.homebrew/lib/node
+# ln -s /usr/local/bin/mvim ~/usr/local/bin/vim
 
 # Barsoom
 [[ -s "$HOME/.bs/profile" ]] && source "$HOME/.bs/profile"
