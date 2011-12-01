@@ -10,7 +10,10 @@ call pathogen#helptags()
 
 filetype plugin indent on  " Load plugin and indent settings for the detected filetype.
 syntax on                  " Syntax highlighting.
-color blackboard           " Default color scheme.
+" color blackboard           " Default color scheme.
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 set number                 " Show gutter with line numbers.
 set ruler                  " Show line, column and scroll info in status line.
 set laststatus=2           " Always show status bar.

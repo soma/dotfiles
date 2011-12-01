@@ -1,5 +1,4 @@
-# Temp vim
-alias vim="mvim"
+alias tmux="TERM=screen-256color-bce tmux"
 
 # irc
 alias irc='ssh albert@ci.barsoom.se -t screen -dRUS irssi irssi'
