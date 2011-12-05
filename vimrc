@@ -10,10 +10,7 @@ call pathogen#helptags()
 
 filetype plugin indent on  " Load plugin and indent settings for the detected filetype.
 syntax on                  " Syntax highlighting.
-" color blackboard           " Default color scheme.
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+color blackboard           " Default color scheme.
 set number                 " Show gutter with line numbers.
 set ruler                  " Show line, column and scroll info in status line.
 set laststatus=2           " Always show status bar.
@@ -58,7 +55,7 @@ set list!
 set fillchars=vert:\ 
 
 " Searching.
-" set hlsearch    " Highlight results.
+set hlsearch    " Highlight results.
 set incsearch   " Search-as-you-type.
 set ignorecase  " Case-insensitive…
 set smartcase   " …unless phrase includes uppercase.
@@ -68,9 +65,9 @@ set nojoinspaces                " 1 space, not 2, when joining sentences.
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode.
 
 " NERDTree configuration
-"let NERDTreeIgnore=['\.rbc$', '\~$']
+let NERDTreeIgnore=['\.rbc$', '\~$']
 " Disable menu
-"let g:NERDMenuMode=0
+let g:NERDMenuMode=0
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
@@ -146,15 +143,12 @@ au FileType HELP map <buffer> q :q<CR>
 " We overload a command, but use 'cc' for that anyway.
 noremap S :w<CR>
 
-" Map Q and gQ to something useful instead of the weird 'Ex' mode.
-" Save some keypresses when closing a window.
-noremap Q :q<CR>
-" Close a full tab page.
-noremap gQ :windo bd<CR>
+" Make Y consistent with C and D - yank to end of line, not full line.
+nnoremap Y y$
 
-" Y yanks to OS X pasteboard.
-map Y "*y
-
+" Map Q to something useful (e.g. QQ to hard-break current line).
+" Otherwise Q enters the twilight zone of the 'Ex' mode.
+noremap Q gq
 
 nnoremap / /\v
 vnoremap / /\v
@@ -177,10 +171,6 @@ noremap k gk
 noremap j gj
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
-
-" Shift + left/right to switch tabs.
-noremap <S-Left> :tabp<CR>
-noremap <S-Right> :tabn<CR>
 
 " Save a file as root.
 cabbrev w!! w !sudo tee % > /dev/null<CR>:e!<CR><CR>
@@ -254,6 +244,9 @@ nmap <leader><down>   :rightbelow sp<CR>
 let g:NERDCreateDefaultMappings=0
 map <leader>c <Plug>NERDCommenterToggle
 
+" Y yanks to OS X pasteboard.
+map Y "*y
+
 " Quicker filetype setting:
 "   :F html
 " instead of
@@ -271,9 +264,6 @@ command! W w
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
 command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
-" Vim insert mode cursor toggle
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Snippets that are too long for .vimrc, too short for plugins.
 
