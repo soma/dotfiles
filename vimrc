@@ -58,7 +58,7 @@ set list!
 set fillchars=vert:\ 
 
 " Searching.
-set hlsearch    " Highlight results.
+" set hlsearch    " Highlight results.
 set incsearch   " Search-as-you-type.
 set ignorecase  " Case-insensitive…
 set smartcase   " …unless phrase includes uppercase.
