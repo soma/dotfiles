@@ -7,10 +7,10 @@ alias irc='ssh albert@ci.barsoom.se -t screen -dRUS irssi irssi'
 alias o="open ."  # OS X, open in Finder
 
 # http://www.hogbaysoftware.com/products/plaintext
-alias text='mvim ~/Dropbox/PlainText'
+alias text='vim ~/Dropbox/PlainText'
 
 # Management
-alias dots="mvim ~/.dotfiles"
+alias dots="vim ~/.dotfiles"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
