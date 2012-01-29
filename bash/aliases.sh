@@ -10,7 +10,7 @@ alias o="open ."  # OS X, open in Finder
 alias text='vim ~/Dropbox/PlainText'
 
 # Management
-alias dots="vim ~/.dotfiles"
+alias dots="cd ~/.dotfiles && vim"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
 alias redot='cd ~/.dotfiles && gpp && rake install; cd -'
 
