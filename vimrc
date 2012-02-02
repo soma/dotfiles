@@ -271,6 +271,9 @@ command! W w
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
 command! Strip let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
+" Vim insert mode cursor toggle
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Snippets that are too long for .vimrc, too short for plugins.
 

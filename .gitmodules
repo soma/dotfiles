@@ -12,9 +12,6 @@
 	path = vim/bundle/textile.vim
 	url = git://github.com/timcharper/textile.vim.git
 	ignore = untracked
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
@@ -37,9 +34,6 @@
 [submodule "vim/bundle/AutoClose"]
 	path = vim/bundle/AutoClose
 	url = git://github.com/vim-scripts/AutoClose.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "vim/bundle/zoomWin"]
 	path = vim/bundle/zoomWin
 	url = git://github.com/vim-scripts/ZoomWin.git
@@ -47,9 +41,6 @@
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
@@ -64,20 +55,9 @@
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	ignore = untracked
-[submodule "vim/bundle/vim-conque"]
-	path = vim/bundle/vim-conque
-	url = git://github.com/rson/vim-conque.git
-	ignore = untracked
-[submodule "vim/bundle/snipmate"]
-	path = vim/bundle/snipmate
-	url = git@github.com:henrik/snipmate.vim.git
-	ignore = untracked
 [submodule "vim/bundle/vim-ruby-sinatra"]
 	path = vim/bundle/vim-ruby-sinatra
 	url = git://github.com/hallison/vim-ruby-sinatra.git
-[submodule "vim/bundle/delimitMate"]
-	path = vim/bundle/delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/vim-indexed-search"]
 	path = vim/bundle/vim-indexed-search
 	url = git://github.com/henrik/vim-indexed-search.git
@@ -91,10 +71,6 @@
 [submodule "vim/bundle/vim-ruby-runner"]
 	path = vim/bundle/vim-ruby-runner
 	url = git@github.com:henrik/vim-ruby-runner.git
-[submodule "vim/bundle/vim-ragtag"]
-	path = vim/bundle/vim-ragtag
-	url = git://github.com/tpope/vim-ragtag.git
-	ignore = untracked
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
