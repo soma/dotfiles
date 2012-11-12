@@ -6,8 +6,8 @@ export PATH=~/bin:$PATH
 
 # brew install autojump
 # https://github.com/joelthelion/autojump
-if [ -f `bsbrew --prefix`/etc/autojump ]; then
-  . `bsbrew --prefix`/etc/autojump
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
 fi
 
 # To get the GUI-less Vim from MacVim:

@@ -24,3 +24,5 @@ source ~/.vim/config/mappings.vim
 
 source ~/.vim/shorts/edit_rails_locales.vim
 source ~/.vim/shorts/focus_toggle.vim
+
+let g:syntastic_ruby_exec = 'ruby19'
