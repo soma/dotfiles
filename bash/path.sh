@@ -1,5 +1,5 @@
 # Custom scripts
-export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:~/bin:$PATH
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 

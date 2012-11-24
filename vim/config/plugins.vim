@@ -25,6 +25,8 @@ Bundle 'vim-scripts/file-line'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'wincent/Command-T'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'benmills/vimux'
 
 " Command-T
 let g:CommandTMaxHeight=20
@@ -52,3 +54,13 @@ nmap <leader>cu <Plug>CommentaryUndo
 let g:yankring_paste_using_g = 0
 let g:yankring_history_dir = '~/.vim/backup'
 
+
+" Vimux
+let g:VimuxOrientation = "h"
+let g:VimuxUseNearestPane = 1
+
+" turbux
+let g:no_turbux_mappings = 1
+map M <Plug>SendTestToTmux
+map m <Plug>SendFocusedTestToTmux
+let g:turbux_command_rspec = 'script/turbux_rspec'
