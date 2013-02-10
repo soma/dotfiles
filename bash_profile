@@ -7,9 +7,13 @@ unset command_not_found_handle
 
 source ~/.bash/path.sh
 source ~/.bash/env.sh
-source ~/.bash/prompt.sh
+source ~/.bash/completion.sh
+
 source ~/.bash/aliases.sh
 source ~/.bash/functions.sh
+source ~/.bash/prompt.sh
+
 
 [[ -s "$HOME/.local_aliases" ]] && source "$HOME/.local_aliases"
 
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
