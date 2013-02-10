@@ -41,6 +41,7 @@ alias ss="[ -f script/server ] && script/server || rails server"
 alias mig='rake db:migrate'
 alias rsp="bundle exec specjour"
 alias f="script/foreman_turbux"
+alias fkill="killall ruby;killall memcached;killall node; killall searchd; killall redis-server"
 alias rs="rake testbot:spec"
 
 
