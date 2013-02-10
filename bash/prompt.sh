@@ -3,14 +3,12 @@
 # http://tammersaleh.com/posts/a-better-rvm-bash-prompt
 # https://rvm.beginrescueend.com/workflow/prompt/
 
-# 17:39:15 henrik@Nyx ~/project[ree-1.8.7@project master*]$ 
-
-# git bash completion.
-# Required for the prompt. Also provides autocompletion of git commands and branch names.
-. ~/.dotfiles/bash/lib/git-completion.bash
+# 17:39:15 henrik@Nyx project_dir ree-1.8.7@project master*$ 
 
 function __rvm_prompt {
-  rvm-prompt i v g s
+  if hash rvm-prompt 2>&- ; then
+    echo " `rvm-prompt i v g s`"
+  fi
 }
 
 function __git_prompt {
@@ -50,7 +48,7 @@ bash_prompt() {
   # reset
   local RESET="\[\033[0;37m\]"
 
-  PS1="\t $BY\$(__name_and_server)$Y\w$G[\$(__rvm_prompt)$G\$(__git_prompt)]$RESET$ "
+  PS1="\t $BY\$(__name_and_server)$Y\W$G\$(__rvm_prompt)$G\$(__git_prompt)$RESET$ "
 
 }
 
