@@ -27,12 +27,21 @@ Bundle 'wincent/Command-T'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'benmills/vimux'
+Bundle 'slim-template/vim-slim'
+Bundle 'kien/ctrlp.vim'
 
 " Command-T
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx
+
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_max_height = 20
+let g:ctrlp_show_hidden = 0
+let g:ctrlp_max_files = 0
+let g:ctrlp_switch_buffer = 0
 
 " Syntastic
 let g:syntastic_enable_signs=1
