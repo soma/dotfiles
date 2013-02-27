@@ -10,6 +10,9 @@ alias o="open ."  # OS X, open in Finder
 # http://www.hogbaysoftware.com/products/plaintext
 alias text='vim ~/Dropbox/PlainText'
 
+# Vagrant
+alias v="vagrant"
+
 # Management
 alias dots="cd ~/.dotfiles && vim"
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
