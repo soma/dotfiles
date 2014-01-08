@@ -29,6 +29,7 @@ Bundle 'jgdavey/vim-turbux'
 Bundle 'benmills/vimux'
 Bundle 'slim-template/vim-slim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'elixir-lang/vim-elixir'
 
 " Command-T
 let g:CommandTMaxHeight=20
