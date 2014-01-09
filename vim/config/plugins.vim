@@ -9,7 +9,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'taq/vim-rspec'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
@@ -21,9 +20,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/argtextobj.vim'
-Bundle 'vim-scripts/file-line'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'wincent/Command-T'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'benmills/vimux'
@@ -32,8 +28,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'elixir-lang/vim-elixir'
 
 " Command-T
-let g:CommandTMaxHeight=20
-let g:CommandTMatchWindowAtTop=1
 set wildignore+=*.o,*.obj,.git,tmp
 set wildignore+=public/uploads,db/sphinx
 
@@ -46,7 +40,7 @@ let g:ctrlp_switch_buffer = 0
 
 " Syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 
 " NERDTree
@@ -68,13 +62,15 @@ let g:yankring_history_dir = '~/.vim/backup'
 
 " Vimux
 let g:VimuxOrientation = "h"
-let g:VimuxUseNearestPane = 1
 
 " turbux
 let g:no_turbux_mappings = 1
 map M <Plug>SendTestToTmux
 map m <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec = 'script/turbux_rspec'
+
+" CtrlP
+nmap <leader>cc <Plug>CtrlP
 
 " Rails.vim
 
