@@ -67,10 +67,10 @@ let g:VimuxOrientation = "h"
 let g:no_turbux_mappings = 1
 map M <Plug>SendTestToTmux
 map m <Plug>SendFocusedTestToTmux
-let g:turbux_command_rspec = 'script/turbux_rspec'
+let g:turbux_command_rspec = 'script/test'
 
 " CtrlP
-nmap <leader>cc <Plug>CtrlP
+let g:ctrlp_map = '<leader>t'
 
 " Rails.vim
 
