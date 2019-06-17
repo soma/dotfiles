@@ -20,3 +20,8 @@ source ~/.bash/pairing.sh
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.6.0/java"
+
+# Adds Keychain credentials in ssh-agent
+[[ $OSTYPE =~ "darwin" ]] && ssh-add -K
+
+source ~/.shell_local

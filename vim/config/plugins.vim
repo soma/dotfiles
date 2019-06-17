@@ -26,6 +26,9 @@ Bundle 'benmills/vimux'
 Bundle 'slim-template/vim-slim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'mhinz/vim-mix-format'
+Bundle 'ElmCast/elm-vim'
+Bundle 'junegunn/fzf.vim'
 
 " Command-T
 set wildignore+=*.o,*.obj,.git,tmp
@@ -94,3 +97,10 @@ autocmd User Rails/spec/engines/* let b:rails_alternate = rails#buffer().name()[
 
 " :A on unit/engines/foo/bar_spec.rb -> engines/foo/bar.rb
 autocmd User Rails/unit/engines/* let b:rails_alternate = rails#buffer().name()[5:-9] . '.rb'
+
+" Elm-vim
+let g:elm_format_autosave = 1
+
+" Vim-mix-format
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1

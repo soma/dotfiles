@@ -6,6 +6,7 @@ let mapleader = ","
 " filetype off and then on again afterwards for ftdetect files to work properly.
 filetype off
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.fzf
 call vundle#rc()
 Bundle 'gmarik/vundle'
 

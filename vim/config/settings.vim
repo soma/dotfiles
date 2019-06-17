@@ -9,7 +9,7 @@ set laststatus=2                " Always show status bar.
 "set lbr                        " Linebreak between words. Not compatible with listchars.
 set listchars=nbsp:·,tab:▸\ ,trail:·  " Configure how invisibles appear.
 set list!                       " Show invisibles.
-set modelines=1                 " Use modeline overrides.
+set nomodeline                  " Don't use modelines: https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 set nojoinspaces                " 1 space, not 2, when joining sentences.
 set number                      " Show gutter with line numbers.
 set ruler                       " Show line, column and scroll info in status line.
